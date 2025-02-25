@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-13G5BB9MT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-13G5BB9MT7');
+</script>
+    
     <style>
         * {
             margin: 0;
@@ -72,6 +82,17 @@
                 <input type="tel" id="phone" name="phone" placeholder="Enter Your Contact Number" required>
             </div>
             <button type="submit">Submit</button>
+<button id="register-button">Register</button>
+
+<script>
+document.getElementById("register-button").addEventListener("click", function() {
+    gtag("event", "register_click", {
+        event_category: "engagement",
+        event_label: "Register Button",
+    });
+    alert("Event Registered");
+});
+</script>
         </form>
     </div>
 </body>
